@@ -1,7 +1,7 @@
 # react-native-CountDowntimer
 A simple countdown component with React Native which Only needs a end time.
 
-[中文](https://github.com/jackuhan/react-native-CountDowntimer/README-CH.md)
+[中文](https://github.com/jackuhan/react-native-CountDowntimer/blob/master/README-CH.md)
 
 ## Props
 ### date
