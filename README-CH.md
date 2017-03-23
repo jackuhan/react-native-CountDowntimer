@@ -6,7 +6,7 @@
 ### date
 isoformat 或者 js dates格式的结束时间。
 
-##使用demo
+## 使用demo
 ``` javascript
 import CountDown from './CountDownReact'
 
@@ -20,7 +20,7 @@ segs=''
 
 ```
 
-##联系方式
+## 联系方式
 
 QQ:1196681436
 

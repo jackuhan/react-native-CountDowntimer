@@ -7,7 +7,7 @@ A simple countdown component with React Native which Only needs a end time.
 ### date
 A string width valid date like isoformat or js dates
 
-##Example
+## Example
 ``` javascript
 import CountDown from './CountDownReact'
 
@@ -21,7 +21,7 @@ segs=''
 
 ```
 
-##Contact
+## Contact
 
 QQ:1196681436
 
