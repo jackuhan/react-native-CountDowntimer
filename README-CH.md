@@ -20,5 +20,13 @@ segs=''
 
 ```
 
+##联系方式
 
+QQ:1196681436
+
+Weibo:http://www.weibo.com/u/1693069642
+
+email:jackuhan@gmail.com
+
+欢迎提出意见，提交代码。
 
