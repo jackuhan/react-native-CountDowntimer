@@ -3,6 +3,8 @@ A simple countdown component with React Native which Only needs a end time.
 
 [中文](https://github.com/jackuhan/react-native-CountDowntimer/blob/master/README-CH.md)
 
+<img src="art.png" width="50%" height="50%" alt="art">
+
 ## Props
 ### date
 A string width valid date like isoformat or js dates
@@ -11,13 +13,21 @@ A string width valid date like isoformat or js dates
 ``` javascript
 import CountDown from './CountDownReact'
 
-<CountDown
-date="2017-03-29T00:00:00+00:00"
-days={{plural: 'Days',singular: 'Day'}}
-hours=':'
-mins=':'
-segs=''
-/>
+ <CountDown
+          //date={new Date(parseInt(endTime))}
+          date="2017-11-28T00:00:00+00:00"
+          days={{plural: 'Days ',singular: 'day '}}
+          hours=':'
+          mins=':'
+          segs=''
+
+          daysStyle={styles.time}
+          hoursStyle={styles.time}
+          minsStyle={styles.time}
+          secsStyle={styles.time}
+          firstColonStyle={styles.colon}
+          secondColonStyle={styles.colon}
+      />
 
 ```
 
