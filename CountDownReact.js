@@ -14,6 +14,27 @@ const styles = StyleSheet.create({
   cardItemTimeRemainTxt: {
     fontSize: 10,
     color: '#ee394b'
+  },
+  text: {
+    fontSize: 30,
+    color: '#FFF',
+    marginLeft: 7,
+  },
+  container: {
+    flexDirection: 'row',
+  },
+  //时间文字
+  defaultTime: {
+    paddingHorizontal: 3,
+    backgroundColor: 'rgba(85, 85, 85, 1)',
+    fontSize: 12,
+    color: 'white',
+    marginHorizontal: 3,
+    borderRadius: 2,
+  },
+  //冒号
+  defaultColon: {
+    fontSize: 12, color: 'rgba(85, 85, 85, 1)'
   }
 });
 
@@ -26,17 +47,34 @@ class CountDown extends Component {
     mins: PropTypes.string,
     segs: PropTypes.string,
     onEnd: PropTypes.func,
+
+    containerStyle: View.propTypes.style,
+    daysStyle: View.propTypes.style,
+    hoursStyle: View.propTypes.style,
+    minsStyle: View.propTypes.style,
+    secsStyle: View.propTypes.style,
+    firstColonStyle: View.propTypes.style,
+    secondColonStyle: View.propTypes.style,
+
   };
   static defaultProps = {
     date: new Date(),
     days: {
-      plural: 'Days',
-      singular: 'Day',
+      plural: '天',
+      singular: '天',
     },
     hours: ':',
     mins: ':',
     segs: ':',
     onEnd: () => {},
+
+    containerStyle: styles.container,//container 的style
+    daysStyle: styles.defaultTime,//天数 字体的style
+    hoursStyle: styles.defaultTime,//小时 字体的style
+    minsStyle: styles.defaultTime,//分钟 字体的style
+    secsStyle: styles.defaultTime,//秒数 字体的style
+    firstColonStyle: styles.defaultColon,//从左向右 第一个冒号 字体的style
+    secondColonStyle: styles.defaultColon,//从左向右 第2个冒号 字体的style
 
   };
   state = {
@@ -46,6 +84,7 @@ class CountDown extends Component {
     sec: 0,
   };
   componentDidMount() {
+    //console.log(this.props.date);//"2017-03-29T00:00:00+00:00"
     this.interval = setInterval(()=> {
       const date = this.getDateData(this.props.date);
       if (date) {
@@ -109,11 +148,25 @@ class CountDown extends Component {
     } else {
       days = this.props.days.plural;
     }
-    return (<Text style={styles.cardItemTimeRemainTxt}>  {
-          ((countDown.days > 0) ? this.leadingZeros(countDown.days)+days:'')
-          +this.leadingZeros(countDown.hours)
-        +':'+this.leadingZeros(countDown.min)
-          +':'+this.leadingZeros(countDown.sec)}</Text>
+    return (
+    //    <View style={styles.container}>
+    //      <Text style={styles.text}>{
+    //        ((countDown.days > 0) ? this.leadingZeros(countDown.days)+days:'')
+    //        +this.leadingZeros(countDown.hours)
+    //        +':'+this.leadingZeros(countDown.min)
+    //        +':'+this.leadingZeros(countDown.sec)}</Text>
+    //    </View>
+    //
+        <View style={this.props.containerStyle}>
+          { (countDown.days>0) ? <Text style={this.props.daysStyle}>{ this.leadingZeros(countDown.days)+days}</Text> : null}
+          <Text style={this.props.hoursStyle}>{ this.leadingZeros(countDown.hours)}</Text>
+          <Text style={ this.props.firstColonStyle}>:</Text>
+          <Text style={this.props.minsStyle}>{this.leadingZeros(countDown.min)}</Text>
+          <Text style={this.props.secondColonStyle}>:</Text>
+          <Text style={this.props.secsStyle}>{this.leadingZeros(countDown.sec)}</Text>
+        </View>
+
+
     );
   }
   stop() {
