@@ -1,7 +1,7 @@
 # react-native-CountDowntimer
 倒计时控件,只需要添加一个结束时间。适用于商品秒杀页面等等。
 
-<img src="art.png" width="50%" height="50%" alt="art">
+<img src="art.png" alt="art">
 
 
 ## 参数Props

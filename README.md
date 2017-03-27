@@ -5,8 +5,6 @@ A simple countdown component with React Native which Only needs a end time.
 
 <img src="art.png" alt="art">
 
-![arts](https://github.com/jackuhan/react-native-CountDowntimer/blob/master/art.png)
-
 ## Props
 ### date
 A string width valid date like isoformat or js dates
