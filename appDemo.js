@@ -4,9 +4,8 @@ import {
     TouchableHighlight,
     Image,
     Text,
-    View
+    View,
 } from 'react-native';
-
 import CountDown from './CountDownReact'
 
 const appDemo = React.createClass({
@@ -16,7 +15,7 @@ const appDemo = React.createClass({
     return <View style={{paddingTop:40,}}>
       <CountDown
           //date={new Date(parseInt(seckill.endTime))}
-          date="2017-04-28T00:00:00+00:00"
+          date="2017-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}
           hours=':'
           mins=':'
@@ -30,37 +29,79 @@ const appDemo = React.createClass({
           secondColonStyle={styles.colon}
       />
 
+      <View style={{
+                flexDirection: 'row',
+                alignItems:'baseline',
+                marginTop:20,
+            }}>
+        <Text style={styles.cardItemTimeRemainTxt}>还剩</Text>
+        <CountDown
+            //date={new Date(parseInt(seckill.endTime))}
+            date="2017-11-28T00:00:00+00:00"
+            days={{plural: '天 ',singular: '天 '}}
+            hours=':'
+            mins=':'
+            segs=''
+
+            daysStyle={styles.cardItemTimeRemainTxt}
+            hoursStyle={styles.cardItemTimeRemainTxt}
+            minsStyle={styles.cardItemTimeRemainTxt}
+            secsStyle={styles.cardItemTimeRemainTxt}
+            firstColonStyle={styles.cardItemTimeRemainTxt}
+            secondColonStyle={styles.cardItemTimeRemainTxt}
+        />
+      </View>
+
       <CountDown
           //date={new Date(parseInt(seckill.endTime))}
-          date="2017-04-28T00:00:00+00:00"
-          days={{plural: 'Days ',singular: 'day '}}
+          date="2017-11-28T00:00:00+00:00"
+          days={{plural: 'D ',singular: 'D '}}
           hours=':'
           mins=':'
           segs=''
 
-          daysStyle={styles.cardItemTimeRemainTxt}
-          hoursStyle={styles.cardItemTimeRemainTxt}
-          minsStyle={styles.cardItemTimeRemainTxt}
-          secsStyle={styles.cardItemTimeRemainTxt}
-          firstColonStyle={styles.cardItemTimeRemainTxt}
-          secondColonStyle={styles.cardItemTimeRemainTxt}
+          containerStyle={styles.container}
+          daysStyle={styles.text}
+          hoursStyle={styles.text}
+          minsStyle={styles.text}
+          secsStyle={styles.text}
+          firstColonStyle={styles.text}
+          secondColonStyle={styles.text}
       />
 
-      <CountDown
-          //date={new Date(parseInt(seckill.endTime))}
-          date="2017-04-28T00:00:00+00:00"
-          days={{plural: 'Days ',singular: 'day '}}
-          hours=':'
-          mins=':'
-          segs=''
 
-          daysStyle={styles.time}
-          hoursStyle={styles.time}
-          minsStyle={styles.time}
-          secsStyle={styles.time}
-          firstColonStyle={styles.colon}
-          secondColonStyle={styles.colon}
-      />
+      <View style={styles.cardItem}>
+        <Image source={{uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490619100822&di=7d1e86cec14d93f970d9b9909e4d98c1&imgtype=0&src=http%3A%2F%2Fimg.51ztzj.com%2Fupload%2Fimage%2F20150826%2F20150826002_670x419.jpg'}}
+               style={styles.cardItemMainPic} backgroundColor={'#'+Math.floor(Math.random()*16777215).toString(16)}/>
+        <View style={styles.cardItemMask}>
+          <View style={styles.cardItemTimer}>
+            <Image style={styles.cardItemTimerIcon}
+                   source={{uri: 'http://www.qiyipic.com/common/fix/gmjy3/images/groupontimeredicon.png'}}/>
+            <View style={{
+                flexDirection: 'row',
+                alignItems:'baseline'
+            }}>
+              <Text style={styles.cardItemTimeRemainTxt}>还剩</Text>
+              <CountDown
+                  //date={new Date(parseInt(seckill.endTime))}
+                  date="2017-10-28T00:00:00+00:00"
+                  days={{plural: '天 ',singular: '天 '}}
+                  hours=':'
+                  mins=':'
+                  segs=''
+
+                  daysStyle={styles.cardItemTimeRemainTxt}
+                  hoursStyle={styles.cardItemTimeRemainTxt}
+                  minsStyle={styles.cardItemTimeRemainTxt}
+                  secsStyle={styles.cardItemTimeRemainTxt}
+                  firstColonStyle={styles.cardItemTimeRemainTxt}
+                  secondColonStyle={styles.cardItemTimeRemainTxt}
+              />
+            </View>
+          </View>
+
+        </View>
+      </View>
     </View>
   }
 });
@@ -69,7 +110,7 @@ const appDemo = React.createClass({
 const styles = StyleSheet.create({
 
   cardItemTimeRemainTxt: {
-    fontSize: 10,
+    fontSize: 20,
     color: '#ee394b'
   },
   container: {
@@ -77,6 +118,7 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 5,
     flexDirection: 'row',
+    marginTop:20
   },
   text: {
     fontSize: 30,
@@ -95,8 +137,33 @@ const styles = StyleSheet.create({
   //冒号
   colon: {
     fontSize: 12, color: 'rgba(85, 85, 85, 1)'
-  }
-});
+  },
 
+  cardItemMask:{
+    position: 'absolute',
+    top: 15,
+    right:10,
+    backgroundColor: 'transparent'
+  },
+  cardItemTimer:{
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  cardItemTimerIcon: {
+    width:11,
+    height: 11,
+  },
+  cardItem: {
+    flexDirection: 'column',
+    backgroundColor:'red',
+    marginTop:20,
+    width: 370,
+    height: 370 * 0.65625,
+  },
+  cardItemMainPic: {
+     width: 370,
+    height: 370 * 0.65625,
+  },
+});
 
 export default appDemo

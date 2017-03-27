@@ -12,7 +12,7 @@ import {
 
 const styles = StyleSheet.create({
   cardItemTimeRemainTxt: {
-    fontSize: 10,
+    fontSize: 20,
     color: '#ee394b'
   },
   text: {
