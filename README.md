@@ -3,7 +3,9 @@ A simple countdown component with React Native which Only needs a end time.
 
 [中文](https://github.com/jackuhan/react-native-CountDowntimer/blob/master/README-CH.md)
 
-<img src="art.png" width="50%" height="50%" alt="art">
+<img src="art.png" alt="art">
+
+![arts](https://github.com/jackuhan/react-native-CountDowntimer/blob/master/art.png)
 
 ## Props
 ### date
