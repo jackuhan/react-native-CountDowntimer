@@ -17,4 +17,4 @@ import {
 
 import appDemo from './appDemo'
 
-AppRegistry.registerComponent('CountDownReact', () => appDemo);
+AppRegistry.registerComponent('react-native-CountDowntimer', () => appDemo);

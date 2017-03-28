@@ -11,9 +11,9 @@ A string width valid date like isoformat or js dates
 
 ## Example
 ``` javascript
-import CountDown from './CountDownReact'
+import CountDownReact from './CountDownReact'
 
- <CountDown
+ <CountDownReact
           //date={new Date(parseInt(endTime))}
           date="2017-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}

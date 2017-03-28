@@ -6,14 +6,14 @@ import {
     Text,
     View,
 } from 'react-native';
-import CountDown from './CountDownReact'
+import CountDownReact from './CountDownReact'
 
 const appDemo = React.createClass({
 
 
   render() {
     return <View style={{paddingTop:40,}}>
-      <CountDown
+      <CountDownReact
           //date={new Date(parseInt(seckill.endTime))}
           date="2017-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}
@@ -35,7 +35,7 @@ const appDemo = React.createClass({
                 marginTop:20,
             }}>
         <Text style={styles.cardItemTimeRemainTxt}>还剩</Text>
-        <CountDown
+        <CountDownReact
             //date={new Date(parseInt(seckill.endTime))}
             date="2017-11-28T00:00:00+00:00"
             days={{plural: '天 ',singular: '天 '}}
@@ -52,7 +52,7 @@ const appDemo = React.createClass({
         />
       </View>
 
-      <CountDown
+      <CountDownReact
           //date={new Date(parseInt(seckill.endTime))}
           date="2017-11-28T00:00:00+00:00"
           days={{plural: 'D ',singular: 'D '}}
@@ -71,7 +71,7 @@ const appDemo = React.createClass({
 
 
       <View style={styles.cardItem}>
-        <Image source={{uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490619100822&di=7d1e86cec14d93f970d9b9909e4d98c1&imgtype=0&src=http%3A%2F%2Fimg.51ztzj.com%2Fupload%2Fimage%2F20150826%2F20150826002_670x419.jpg'}}
+        <Image source={{uri: 'timg'}}
                style={styles.cardItemMainPic} backgroundColor={'#'+Math.floor(Math.random()*16777215).toString(16)}/>
         <View style={styles.cardItemMask}>
           <View style={styles.cardItemTimer}>
@@ -82,7 +82,7 @@ const appDemo = React.createClass({
                 alignItems:'baseline'
             }}>
               <Text style={styles.cardItemTimeRemainTxt}>还剩</Text>
-              <CountDown
+              <CountDownReact
                   //date={new Date(parseInt(seckill.endTime))}
                   date="2017-10-28T00:00:00+00:00"
                   days={{plural: '天 ',singular: '天 '}}

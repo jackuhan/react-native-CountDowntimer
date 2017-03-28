@@ -10,9 +10,9 @@ iso 格式 或者 js dates格式的结束时间。
 
 ## 使用demo
 ``` javascript
-import CountDown from './CountDownReact'
+import CountDownReact from './CountDownReact'
 
- <CountDown
+ <CountDownReact
           //date={new Date(parseInt(endTime))}
           date="2017-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}
