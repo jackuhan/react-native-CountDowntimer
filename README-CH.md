@@ -10,9 +10,19 @@ iso 格式 或者 js dates格式的结束时间。
 
 ## 使用demo
 ``` javascript
-import CountDownReact from './CountDownReact'
+1.从npm安装 
+//in package.json
+"dependencies": {
+    "react_native_countdowntimer":"1.0.2"
+  }
+//in your js code
+import CountDownTimer from 'react_native_countdowntimer' 
 
- <CountDownReact
+2.直接使用本地代码
+import CountDownReact from './CountDownReact' //
+
+
+ <CountDownTimer
           //date={new Date(parseInt(endTime))}
           date="2017-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}

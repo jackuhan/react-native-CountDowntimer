@@ -11,9 +11,19 @@ A string width valid date like isoformat or js dates
 
 ## Example
 ``` javascript
-import CountDownReact from './CountDownReact'
+1.npm install
+//in package.json
+"dependencies": {
+    "react_native_countdowntimer":"1.0.2"
+  }
+//in your js code
+import CountDownTimer from 'react_native_countdowntimer' 
 
- <CountDownReact
+2.local way
+import CountDownReact from './CountDownReact' //
+
+
+ <CountDownTimer
           //date={new Date(parseInt(endTime))}
           date="2017-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}

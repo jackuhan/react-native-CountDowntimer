@@ -1,11 +1,14 @@
 {
-	"name": "react-native-CountDowntimer",
-	"version": "1.0.1",
-	"private": true,
+	"name": "react_native_countdowntimer",
+	"version": "1.0.2",
+    "description": "1.0.2",
+    "main": "CountDownReact.js",
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest"
 	},
+	"author": "hanjiahu<jackuhan@gmail.com>",
+    "license": "MIT"
 	"dependencies": {
 		"react": "15.4.2",
 		"react-native": "0.42.3"
