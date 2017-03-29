@@ -49,12 +49,12 @@ class CountDown extends Component {
     onEnd: PropTypes.func,
 
     containerStyle: View.propTypes.style,
-    daysStyle: View.propTypes.style,
-    hoursStyle: View.propTypes.style,
-    minsStyle: View.propTypes.style,
-    secsStyle: View.propTypes.style,
-    firstColonStyle: View.propTypes.style,
-    secondColonStyle: View.propTypes.style,
+    daysStyle: Text.propTypes.style,
+    hoursStyle: Text.propTypes.style,
+    minsStyle: Text.propTypes.style,
+    secsStyle: Text.propTypes.style,
+    firstColonStyle: Text.propTypes.style,
+    secondColonStyle: Text.propTypes.style,
 
   };
   static defaultProps = {
