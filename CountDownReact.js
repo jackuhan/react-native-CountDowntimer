@@ -160,10 +160,11 @@ class CountDown extends Component {
         <View style={this.props.containerStyle}>
           { (countDown.days>0) ? <Text style={this.props.daysStyle}>{ this.leadingZeros(countDown.days)+days}</Text> : null}
           <Text style={this.props.hoursStyle}>{ this.leadingZeros(countDown.hours)}</Text>
-          <Text style={ this.props.firstColonStyle}>:</Text>
+          <Text style={ this.props.firstColonStyle}>this.props.hours</Text>
           <Text style={this.props.minsStyle}>{this.leadingZeros(countDown.min)}</Text>
-          <Text style={this.props.secondColonStyle}>:</Text>
+          <Text style={this.props.secondColonStyle}>this.props.mins</Text>
           <Text style={this.props.secsStyle}>{this.leadingZeros(countDown.sec)}</Text>
+          <Text style={this.props.secondColonStyle}>this.props.segs</Text>
         </View>
 
 
