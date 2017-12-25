@@ -15,7 +15,7 @@ const appDemo = React.createClass({
     return <View style={{paddingTop:40,}}>
       <CountDownReact
           //date={new Date(parseInt(seckill.endTime))}
-          date="2017-11-28T00:00:00+00:00"
+          date="2018-11-28T00:00:00+00:00"
           days={{plural: 'Days ',singular: 'day '}}
           hours=':'
           mins=':'
