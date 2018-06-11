@@ -50,3 +50,5 @@ email:jackuhan@gmail.com
 
 欢迎提出意见，提交代码。
 
+my-qq-group
+
